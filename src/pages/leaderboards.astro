@@ -109,7 +109,7 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
                               src={defaultAvatar}
                               alt={entry.UserName}
                               class="user-avatar"
-                              data-userlogin={entry.UserLogin}
+                              data-userlogin={entry.UserLogin.toLowerCase()}
                             />
                             <span class="user-name">{entry.UserName}</span>
                           </td>
@@ -150,11 +150,7 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
     </div>
 
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
 
       :root {
         --accent-blue: #0788ac;
@@ -200,11 +196,7 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
         padding: 3rem 2rem;
       }
 
-      main {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-      }
+      main { display: flex; flex-direction: column; gap: 2rem; }
 
       .page-title {
         font-size: 2.5rem;
@@ -250,9 +242,7 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
         transition: all 0.3s ease;
       }
 
-      .section-header:hover {
-        background: rgba(205, 161, 84, 0.1);
-      }
+      .section-header:hover { background: rgba(205, 161, 84, 0.1); }
 
       .section-title {
         font-size: 1.75rem;
@@ -269,23 +259,11 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
         flex-shrink: 0;
       }
 
-      .section-header.expanded .section-chevron {
-        transform: rotate(180deg);
-      }
+      .section-header.expanded .section-chevron { transform: rotate(180deg); }
 
-      .section-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease;
-      }
-
-      .section-content.collapsed {
-        max-height: 0;
-      }
-
-      .section-content.expanded {
-        max-height: 5000px;
-      }
+      .section-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+      .section-content.collapsed { max-height: 0; }
+      .section-content.expanded { max-height: 5000px; }
 
       .search-container {
         position: relative;
@@ -311,9 +289,7 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
         background: rgba(0, 0, 0, 0.4);
       }
 
-      .search-input::placeholder {
-        color: #888;
-      }
+      .search-input::placeholder { color: #888; }
 
       .search-icon {
         position: absolute;
@@ -324,14 +300,8 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
         pointer-events: none;
       }
 
-      .leaderboard-wrapper {
-        overflow-x: auto;
-      }
-
-      .leaderboard-table {
-        width: 100%;
-        border-collapse: collapse;
-      }
+      .leaderboard-wrapper { overflow-x: auto; }
+      .leaderboard-table { width: 100%; border-collapse: collapse; }
 
       .leaderboard-table thead {
         background: rgba(0, 0, 0, 0.3);
@@ -348,14 +318,8 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
         letter-spacing: 0.05em;
       }
 
-      .rank-col {
-        width: 100px;
-      }
-
-      .value-col {
-        width: 150px;
-        text-align: right !important;
-      }
+      .rank-col { width: 100px; }
+      .value-col { width: 150px; text-align: right !important; }
 
       .sortable {
         cursor: pointer;
@@ -365,60 +329,21 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
         white-space: nowrap;
       }
 
-      .sortable:hover {
-        background: rgba(205, 161, 84, 0.1);
-      }
+      .sortable:hover { background: rgba(205, 161, 84, 0.1); }
+      .sort-icon { display: inline-block; margin-left: 0.5rem; vertical-align: middle; }
+      .sortable.active .sort-icon { opacity: 1 !important; }
+      .sortable.asc .sort-icon path:last-child { opacity: 0.3; }
+      .sortable.asc .sort-icon path:first-child { opacity: 1; }
+      .sortable.desc .sort-icon path:first-child { opacity: 0.3; }
+      .sortable.desc .sort-icon path:last-child { opacity: 1; }
 
-      .sort-icon {
-        display: inline-block;
-        margin-left: 0.5rem;
-        vertical-align: middle;
-      }
+      .leaderboard-row { border-bottom: 1px solid rgba(205, 161, 84, 0.1); transition: all 0.2s ease; }
+      .leaderboard-row:hover { background: rgba(205, 161, 84, 0.1); }
+      .leaderboard-row.hidden-row { display: none; }
+      .leaderboard-row.show-all { display: table-row; }
 
-      .sortable.active .sort-icon {
-        opacity: 1 !important;
-      }
-
-      .sortable.asc .sort-icon path:last-child {
-        opacity: 0.3;
-      }
-
-      .sortable.asc .sort-icon path:first-child {
-        opacity: 1;
-      }
-
-      .sortable.desc .sort-icon path:first-child {
-        opacity: 0.3;
-      }
-
-      .sortable.desc .sort-icon path:last-child {
-        opacity: 1;
-      }
-
-      .leaderboard-row {
-        border-bottom: 1px solid rgba(205, 161, 84, 0.1);
-        transition: all 0.2s ease;
-      }
-
-      .leaderboard-row:hover {
-        background: rgba(205, 161, 84, 0.1);
-      }
-
-      .leaderboard-row.hidden-row {
-        display: none;
-      }
-
-      .leaderboard-row.show-all {
-        display: table-row;
-      }
-
-      .leaderboard-table td {
-        padding: 1rem 1.5rem;
-      }
-
-      .rank-cell {
-        font-weight: 600;
-      }
+      .leaderboard-table td { padding: 1rem 1.5rem; }
+      .rank-cell { font-weight: 600; }
 
       .rank-badge {
         display: inline-block;
@@ -430,52 +355,14 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
         color: #ffd166;
       }
 
-      .rank-badge.rank-1 {
-        background: rgba(255, 215, 0, 0.2);
-        border-color: rgba(255, 215, 0, 0.5);
-        color: #ffd700;
-        font-weight: 700;
-      }
+      .rank-badge.rank-1 { background: rgba(255, 215, 0, 0.2); border-color: rgba(255, 215, 0, 0.5); color: #ffd700; font-weight: 700; }
+      .rank-badge.rank-2 { background: rgba(192, 192, 192, 0.2); border-color: rgba(192, 192, 192, 0.5); color: #c0c0c0; font-weight: 700; }
+      .rank-badge.rank-3 { background: rgba(205, 127, 50, 0.2); border-color: rgba(205, 127, 50, 0.5); color: #cd7f32; font-weight: 700; }
 
-      .rank-badge.rank-2 {
-        background: rgba(192, 192, 192, 0.2);
-        border-color: rgba(192, 192, 192, 0.5);
-        color: #c0c0c0;
-        font-weight: 700;
-      }
-
-      .rank-badge.rank-3 {
-        background: rgba(205, 127, 50, 0.2);
-        border-color: rgba(205, 127, 50, 0.5);
-        color: #cd7f32;
-        font-weight: 700;
-      }
-
-      .user-cell {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .user-avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 2px solid rgba(205, 161, 84, 0.3);
-      }
-
-      .user-name {
-        font-size: 0.95rem;
-        color: var(--text-primary);
-        font-weight: 500;
-      }
-
-      .value-cell {
-        font-size: 1rem;
-        font-weight: 600;
-        color: var(--text-primary);
-        text-align: right;
-      }
+      .user-cell { display: flex; align-items: center; gap: 1rem; }
+      .user-avatar { width: 40px; height: 40px; border-radius: 50%; border: 2px solid rgba(205, 161, 84, 0.3); }
+      .user-name { font-size: 0.95rem; color: var(--text-primary); font-weight: 500; }
+      .value-cell { font-size: 1rem; font-weight: 600; color: var(--text-primary); text-align: right; }
 
       .button-container {
         padding: 1.5rem;
@@ -506,67 +393,25 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
         transform: translateY(-1px);
       }
 
-      .toggle-button .chevron {
-        transition: transform 0.3s ease;
-      }
-
-      .toggle-button.expanded .chevron {
-        transform: rotate(180deg);
-      }
+      .toggle-button .chevron { transition: transform 0.3s ease; }
+      .toggle-button.expanded .chevron { transform: rotate(180deg); }
 
       @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
       }
 
       @media (max-width: 768px) {
-        .container {
-          padding: 2rem 1rem;
-        }
-
-        .page-title {
-          font-size: 1.75rem;
-        }
-
-        .section-title {
-          font-size: 1.35rem;
-        }
-
-        .section-header {
-          padding: 1.25rem 1.5rem;
-        }
-
-        .leaderboard-table th,
-        .leaderboard-table td {
-          padding: 0.75rem 1rem;
-        }
-
-        .rank-col {
-          width: 70px;
-        }
-
-        .value-col {
-          width: 100px;
-        }
-
-        .user-avatar {
-          width: 32px;
-          height: 32px;
-        }
-
-        .user-name {
-          font-size: 0.85rem;
-        }
-
-        .value-cell {
-          font-size: 0.9rem;
-        }
+        .container { padding: 2rem 1rem; }
+        .page-title { font-size: 1.75rem; }
+        .section-title { font-size: 1.35rem; }
+        .section-header { padding: 1.25rem 1.5rem; }
+        .leaderboard-table th, .leaderboard-table td { padding: 0.75rem 1rem; }
+        .rank-col { width: 70px; }
+        .value-col { width: 100px; }
+        .user-avatar { width: 32px; height: 32px; }
+        .user-name { font-size: 0.85rem; }
+        .value-cell { font-size: 0.9rem; }
       }
     </style>
 
@@ -581,16 +426,19 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
       const cache = new Map();
 
       let lastTick = 0;
+      let pumpScheduled = false;
 
       function normalizeLogin(v) {
         return (v || '').toString().trim().toLowerCase();
       }
 
       function setAvatarEverywhere(userLogin, url) {
-        const sel = `.user-avatar[data-userlogin="${CSS.escape(userLogin)}"]`;
-        document.querySelectorAll(sel).forEach(img => {
-          if (img && img.src !== url) img.src = url;
-        });
+        const login = normalizeLogin(userLogin);
+        const imgs = document.querySelectorAll('.user-avatar');
+        for (const img of imgs) {
+          const imgLogin = normalizeLogin(img.getAttribute('data-userlogin'));
+          if (imgLogin === login) img.src = url;
+        }
       }
 
       function enqueueUser(userLogin) {
@@ -626,8 +474,6 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
 
       function enqueueInitialTop10Each() {
         document.querySelectorAll('.leaderboard-section').forEach(section => {
-          const sectionId = section.getAttribute('data-section-id');
-          if (!sectionId) return;
           const rows = Array.from(section.querySelectorAll('.leaderboard-row'))
             .filter(r => r.style.display !== 'none')
             .slice(0, 10);
@@ -647,8 +493,9 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
         if (!res.ok) return null;
         const text = (await res.text()).trim();
         if (!text) return null;
-        if (text.toLowerCase().includes('error')) return null;
-        if (text.toLowerCase().includes('user not found')) return null;
+        const t = text.toLowerCase();
+        if (t.includes('error')) return null;
+        if (t.includes('user not found')) return null;
 
         cache.set(login, text);
         return text;
@@ -666,13 +513,8 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
 
           try {
             const avatarUrl = await fetchAvatar(login);
-            if (avatarUrl) {
-              loaded.add(login);
-              setAvatarEverywhere(login, avatarUrl);
-            } else {
-              loaded.add(login);
-              setAvatarEverywhere(login, defaultAvatar);
-            }
+            loaded.add(login);
+            setAvatarEverywhere(login, avatarUrl || defaultAvatar);
           } catch (_) {
             loaded.add(login);
             setAvatarEverywhere(login, defaultAvatar);
@@ -684,14 +526,27 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
         }
       }
 
+      function scheduleNextPump() {
+        if (pumpScheduled) return;
+        pumpScheduled = true;
+        setTimeout(() => {
+          pumpScheduled = false;
+          pump();
+        }, AVATAR_INTERVAL_MS);
+      }
+
       function pump(now = performance.now()) {
         if (avatarQueue.length === 0) return;
-        if (now - lastTick < AVATAR_INTERVAL_MS) return;
+
+        const elapsed = now - lastTick;
+        if (elapsed < AVATAR_INTERVAL_MS) {
+          scheduleNextPump();
+          return;
+        }
+
         lastTick = now;
         processOne().finally(() => {
-          if (avatarQueue.length > 0) {
-            setTimeout(() => pump(), AVATAR_INTERVAL_MS);
-          }
+          if (avatarQueue.length > 0) scheduleNextPump();
         });
       }
 
@@ -796,9 +651,7 @@ const randomBg = backgroundImages[Math.floor(Math.random() * backgroundImages.le
           if (searchTerm === '') {
             rows.forEach((row, index) => {
               row.style.display = '';
-              if (index >= 10 && !row.classList.contains('show-all')) {
-                row.classList.add('hidden-row');
-              }
+              if (index >= 10 && !row.classList.contains('show-all')) row.classList.add('hidden-row');
             });
           } else {
             rows.forEach(row => {
