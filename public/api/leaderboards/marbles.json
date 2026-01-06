@@ -23,7 +23,7 @@
         "format": "number"
       },
       {
-        "key": "Season Points",
+        "key": "SeasonPoints",
         "label": "Season Points",
         "format": "number"
       }
@@ -32,40 +32,13 @@
   },
   "data": [
     {
-      "UserName": "rivorium",
-      "UserLogin": "rivorium",
-      "Gesamt": "4",
-      "Wins": "2",
-      "Eliminations": "0",
-      "Points": "52",
-      "Season Points": "100"
-    },
-    {
-      "UserName": "SrA86",
-      "UserLogin": "sra86",
-      "Gesamt": "3",
-      "Wins": "1",
-      "Eliminations": "0",
-      "Points": "52",
-      "Season Points": "52"
-    },
-    {
-      "UserName": "Jenny_Eleyna",
-      "UserLogin": "jenny_eleyna",
-      "Gesamt": "4",
-      "Wins": "0",
-      "Eliminations": "0",
-      "Points": "50",
-      "Season Points": "80"
-    },
-    {
       "UserName": "chrabby_",
       "UserLogin": "chrabby_",
       "Gesamt": "5",
       "Wins": "0",
       "Eliminations": "0",
       "Points": "46",
-      "Season Points": "66"
+      "SeasonPoints": "66"
     },
     {
       "UserName": "schmidiiii_bot",
@@ -74,16 +47,7 @@
       "Wins": "1",
       "Eliminations": "0",
       "Points": "45",
-      "Season Points": "50"
-    },
-    {
-      "UserName": "xph1lo",
-      "UserLogin": "xph1lo",
-      "Gesamt": "3",
-      "Wins": "0",
-      "Eliminations": "0",
-      "Points": "34",
-      "Season Points": "46"
+      "SeasonPoints": "50"
     },
     {
       "UserName": "SrH_x",
@@ -92,25 +56,7 @@
       "Wins": "1",
       "Eliminations": "1",
       "Points": "31",
-      "Season Points": "32"
-    },
-    {
-      "UserName": "Moonfeder4",
-      "UserLogin": "moonfeder4",
-      "Gesamt": "4",
-      "Wins": "0",
-      "Eliminations": "0",
-      "Points": "27",
-      "Season Points": "0"
-    },
-    {
-      "UserName": "saddi_86",
-      "UserLogin": "saddi_86",
-      "Gesamt": "3",
-      "Wins": "0",
-      "Eliminations": "0",
-      "Points": "22",
-      "Season Points": "26"
+      "SeasonPoints": "32"
     },
     {
       "UserName": "aryaa_qt",
@@ -119,25 +65,61 @@
       "Wins": "0",
       "Eliminations": "1",
       "Points": "20",
-      "Season Points": "0"
+      "SeasonPoints": "0"
     },
     {
-      "UserName": "82Shinigami",
-      "UserLogin": "82shinigami",
-      "Gesamt": "1",
-      "Wins": "0",
+      "UserName": "rivorium",
+      "UserLogin": "rivorium",
+      "Gesamt": "4",
+      "Wins": "2",
       "Eliminations": "0",
-      "Points": "18",
-      "Season Points": "26"
+      "Points": "52",
+      "SeasonPoints": "100"
     },
     {
-      "UserName": "doedchen",
-      "UserLogin": "doedchen",
-      "Gesamt": "2",
+      "UserName": "Jenny_Eleyna",
+      "UserLogin": "jenny_eleyna",
+      "Gesamt": "4",
       "Wins": "0",
       "Eliminations": "0",
-      "Points": "18",
-      "Season Points": "16"
+      "Points": "50",
+      "SeasonPoints": "80"
+    },
+    {
+      "UserName": "Moonfeder4",
+      "UserLogin": "moonfeder4",
+      "Gesamt": "4",
+      "Wins": "0",
+      "Eliminations": "0",
+      "Points": "27",
+      "SeasonPoints": "0"
+    },
+    {
+      "UserName": "SrA86",
+      "UserLogin": "sra86",
+      "Gesamt": "3",
+      "Wins": "1",
+      "Eliminations": "0",
+      "Points": "52",
+      "SeasonPoints": "52"
+    },
+    {
+      "UserName": "xph1lo",
+      "UserLogin": "xph1lo",
+      "Gesamt": "3",
+      "Wins": "0",
+      "Eliminations": "0",
+      "Points": "34",
+      "SeasonPoints": "46"
+    },
+    {
+      "UserName": "saddi_86",
+      "UserLogin": "saddi_86",
+      "Gesamt": "3",
+      "Wins": "0",
+      "Eliminations": "0",
+      "Points": "22",
+      "SeasonPoints": "26"
     },
     {
       "UserName": "bloodycruel",
@@ -146,25 +128,7 @@
       "Wins": "0",
       "Eliminations": "0",
       "Points": "17",
-      "Season Points": "0"
-    },
-    {
-      "UserName": "kensg0908",
-      "UserLogin": "kensg0908",
-      "Gesamt": "1",
-      "Wins": "0",
-      "Eliminations": "0",
-      "Points": "15",
-      "Season Points": "20"
-    },
-    {
-      "UserName": "Whatsnew0101",
-      "UserLogin": "whatsnew0101",
-      "Gesamt": "1",
-      "Wins": "0",
-      "Eliminations": "0",
-      "Points": "12",
-      "Season Points": "32"
+      "SeasonPoints": "0"
     },
     {
       "UserName": "Skytecc",
@@ -173,7 +137,43 @@
       "Wins": "0",
       "Eliminations": "0",
       "Points": "11",
-      "Season Points": "0"
+      "SeasonPoints": "0"
+    },
+    {
+      "UserName": "doedchen",
+      "UserLogin": "doedchen",
+      "Gesamt": "2",
+      "Wins": "0",
+      "Eliminations": "0",
+      "Points": "18",
+      "SeasonPoints": "16"
+    },
+    {
+      "UserName": "82Shinigami",
+      "UserLogin": "82shinigami",
+      "Gesamt": "1",
+      "Wins": "0",
+      "Eliminations": "0",
+      "Points": "18",
+      "SeasonPoints": "26"
+    },
+    {
+      "UserName": "kensg0908",
+      "UserLogin": "kensg0908",
+      "Gesamt": "1",
+      "Wins": "0",
+      "Eliminations": "0",
+      "Points": "15",
+      "SeasonPoints": "20"
+    },
+    {
+      "UserName": "Whatsnew0101",
+      "UserLogin": "whatsnew0101",
+      "Gesamt": "1",
+      "Wins": "0",
+      "Eliminations": "0",
+      "Points": "12",
+      "SeasonPoints": "32"
     },
     {
       "UserName": "Shendrasil",
@@ -182,7 +182,7 @@
       "Wins": "0",
       "Eliminations": "0",
       "Points": "10",
-      "Season Points": "0"
+      "SeasonPoints": "0"
     },
     {
       "UserName": "Daniel__1976",
@@ -191,7 +191,7 @@
       "Wins": "0",
       "Eliminations": "0",
       "Points": "8",
-      "Season Points": "0"
+      "SeasonPoints": "0"
     },
     {
       "UserName": "x_kinglouie_x",
@@ -200,7 +200,7 @@
       "Wins": "0",
       "Eliminations": "0",
       "Points": "8",
-      "Season Points": "0"
+      "SeasonPoints": "0"
     },
     {
       "UserName": "spindi_86",
@@ -209,7 +209,7 @@
       "Wins": "0",
       "Eliminations": "0",
       "Points": "6",
-      "Season Points": "0"
+      "SeasonPoints": "0"
     },
     {
       "UserName": "zelarn",
@@ -218,7 +218,7 @@
       "Wins": "0",
       "Eliminations": "0",
       "Points": "2",
-      "Season Points": "0"
+      "SeasonPoints": "0"
     },
     {
       "UserName": "Minathron00",
@@ -227,7 +227,7 @@
       "Wins": "0",
       "Eliminations": "0",
       "Points": "0",
-      "Season Points": "0"
+      "SeasonPoints": "0"
     },
     {
       "UserName": "Fronter94",
@@ -236,7 +236,7 @@
       "Wins": "0",
       "Eliminations": "1",
       "Points": "0",
-      "Season Points": "0"
+      "SeasonPoints": "0"
     },
     {
       "UserName": "calyypsoolein",
@@ -245,7 +245,7 @@
       "Wins": "0",
       "Eliminations": "1",
       "Points": "0",
-      "Season Points": "0"
+      "SeasonPoints": "0"
     },
     {
       "UserName": "anti_engel",
@@ -254,7 +254,7 @@
       "Wins": "0",
       "Eliminations": "1",
       "Points": "0",
-      "Season Points": "0"
+      "SeasonPoints": "0"
     }
   ]
 }
