@@ -1,8 +1,6 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://tawmae.github.io/blizzi-website',
-  base: '/blizzi-website',
+  site: 'https://blizzi1337.de',
+  base: '/',
 });
